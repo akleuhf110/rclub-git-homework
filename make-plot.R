@@ -1,5 +1,5 @@
 tomato <- read.csv("TomatoR2CSHL.csv", header = T)
 tomato <- na.omit(tomato)
 library(ggplot2)
-qplot(leafleng, leafwid, data = tomato)
-ggsave("leaf-lengXwidth.png", last_plot())
+lw.plot <- qplot(leafleng, leafwid, data = tomato)
+ggsave("leaf-lengXwidth.png", lw.plot)
